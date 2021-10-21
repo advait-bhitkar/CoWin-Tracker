@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/pincodeFragment">
+
+    <fragment
+        android:id="@+id/pincodeFragment"
+        android:name="com.silverstudio.cowintracker.PincodeFragment"
+        android:label="fragment_pincode"
+        tools:layout="@layout/fragment_pincode" >
+        <action
+            android:id="@+id/action_pincodeFragment_to_cowinDetailsFragment"
+            app:destination="@id/cowinDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cowinDetailsFragment"
+        android:name="com.silverstudio.cowintracker.CowinDetailsFragment"
+        android:label="fragment_cowin_details"
+        tools:layout="@layout/fragment_cowin_details" >
+        <action
+            android:id="@+id/action_cowinDetailsFragment_to_pincodeFragment"
+            app:destination="@id/pincodeFragment"
+            app:popUpTo="@+id/pincodeFragment"/>
+    </fragment>
+</navigation>
